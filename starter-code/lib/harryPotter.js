@@ -8,3 +8,19 @@
                    "4 October", "Filius Flitwick", "17 October", "Molly Weasley",
                    "30 October", "Bill Weasley", "29 November", "Rubeus Hagrid",
                    "6 December", "Charlie Weasley", "12 December"];
+
+function chunkArray(array){
+  return _.chunk(array, 2);
+}
+
+birthdays = chunkArray(birthdays);
+
+var moreBirthdays = ["Lily Evans", "30 January", "James Potter", "27 March",
+                     "Dudley Dursley", "30 June", "Tom Riddle", "31 December"];
+
+function addMoreBirthdays(more, birthdays){
+   more = chunkArray(more);
+   var other = _.concat(birthdays, more);
+   return other;
+}
+console.log('More birthdays ',addMoreBirthdays(moreBirthdays,birthdays ));
